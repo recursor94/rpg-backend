@@ -1,6 +1,6 @@
 # bot-backend
 
-A Clojure library designed to ... well, that part is up to you.
+The server side code that manages the database and may handle other user/character related tasks in the irc bot game.
 
 ## Usage
 
@@ -8,6 +8,4 @@ FIXME
 
 ## License
 
-Copyright © 2013 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
+Copyright © 2013 
