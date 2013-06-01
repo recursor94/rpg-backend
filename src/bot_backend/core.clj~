@@ -1,0 +1,20 @@
+(ns bot-backend.core)
+(use 'server.socket)
+(use 'clojure.java.io)
+(import '(java.io BufferedReader InputStreamReader PrintWriter))
+
+
+(def server
+  (create-server
+   8080
+   (fn [in out]
+     (binding
+         [*in* (BufferedReader. (InputStreamReader. in))
+          *out* (PrintWriter. out)]
+       (loop []
+         (println (str (read-line) " I don't know man"))
+         (recur))))))
+
+(def client-sock (.accept (:server-socket server)))
+
+(def sock (java.net.Socket. "localhost" 8080))
